@@ -1,50 +1,36 @@
-import React, { Component } from "react"
-import logo from "./logo.svg"
-import "./App.css"
+import React, { Component } from "react";
+import "./App.css";
 
-class LambdaDemo extends Component {
-  constructor(props) {
-    super(props)
-    this.state = { loading: false, msg: null }
-  }
-
-  handleClick = api => e => {
-    e.preventDefault()
-
-    this.setState({ loading: true })
-    fetch("/.netlify/functions/" + api)
-      .then(response => response.json())
-      .then(json => this.setState({ loading: false, msg: json.msg }))
-  }
-
-  render() {
-    const { loading, msg } = this.state
-
-    return (
-      <p>
-        <button onClick={this.handleClick("hello")}>{loading ? "Loading..." : "Call Lambda"}</button>
-        <button onClick={this.handleClick("async-dadjoke")}>{loading ? "Loading..." : "Call Async Lambda"}</button>
-        <br />
-        <span>{msg}</span>
-      </p>
-    )
-  }
-}
+import QuestionBox from "./components/questionBox";
+import { createQuizData as quizData } from "./api/api";
 
 class App extends Component {
+  state = {
+    isLoading: true,
+    questions: [],
+    error: null
+  };
+
+  async componentDidMount() {
+    try {
+      this.setState({ loading: true });
+      this.setState({ questions: await quizData(), isLoading: false });
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
   render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <LambdaDemo />
-        </header>
-      </div>
-    )
+    if (this.state.isLoading === false) {
+      return (
+        <div>
+          <QuestionBox questions={this.state.questions} />
+        </div>
+      );
+    } else {
+      return null;
+    }
   }
 }
 
-export default App
+export default App;
