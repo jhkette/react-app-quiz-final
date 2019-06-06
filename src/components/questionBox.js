@@ -9,6 +9,17 @@ const Questions = styled.div`
 width: 50rem;
 margin: auto;
 `
+const Choice = styled.li `
+  display: inline-block;
+  background-color: white;
+  margin: 1rem 0;
+  width: auto;
+  padding: 1rem;
+  box-shadow: 2px 2px 8px #a7a7a7;
+  pointer: cursor;
+  &:hover {
+    background-color: #ddd;
+  }`
 
 
 class questionBox extends Component {
@@ -88,7 +99,7 @@ class questionBox extends Component {
           </h3>
           <ul className="list-questions">
             {question.choices.map((choice, index) => (
-              <li
+              <Choice
                 key={index}
                 className={`choice  ${
                   this.state.selectedid === index ? "selected" : ""
@@ -98,7 +109,7 @@ class questionBox extends Component {
                 }
               >
                   {choice.text}
-              </li>
+              </Choice>
             ))}
           </ul>
           <button onClick={this.nextQuestion}>next</button>
