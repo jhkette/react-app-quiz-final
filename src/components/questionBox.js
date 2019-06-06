@@ -17,6 +17,7 @@ const Choice = styled.li `
   padding: 1rem;
   box-shadow: 2px 2px 8px #a7a7a7;
   pointer: cursor;
+  border-radius: .3rem;
   &:hover {
     background-color: #ddd;
   }`
