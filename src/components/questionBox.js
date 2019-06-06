@@ -17,7 +17,7 @@ const Choice = styled.li `
   padding: 1rem;
   box-shadow: 2px 2px 8px #a7a7a7;
   pointer: cursor;
-  border-radius: .2rem;
+  border-radius: .05rem;
   &:hover {
     background-color: #ddd;
   }`
@@ -90,8 +90,10 @@ class questionBox extends Component {
 
     if (this.state.index !== 9) {
       return (
+        <div>
+        <Header index={this.state.index} score={this.state.score} />
         <Questions>
-          <Header index={this.state.index} score={this.state.score} />
+          
           <h2>
             {question.text}
           </h2>
@@ -122,6 +124,7 @@ class questionBox extends Component {
             </h3>
           )}
         </Questions>
+        </div>
       );
     } else {
       return <QuizCompleted score={this.state.score} />;
