@@ -17,7 +17,7 @@ exports.handler  = function(event, context, callback){
             body: JSON.stringify(body)
           });
     }
-
+       
     const getdata = ()=> {
         axios.get(url)
         .then(res => send(res.data))

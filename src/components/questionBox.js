@@ -1,9 +1,19 @@
 import React, { Component } from "react";
+import styled, { css } from 'styled-components';
 
 import Header from "./header";
 import QuizCompleted from "./quizCompleted";
 
+
+const Questions = styled.div`
+width: 50rem;
+margin: auto;
+`
+
+
 class questionBox extends Component {
+
+
   constructor(props) {
     super(props);
 
@@ -62,21 +72,19 @@ class questionBox extends Component {
     console.log(this.state.selected);
   };
 
+
   render() {
     const question = this.questions[this.state.index];
 
     if (this.state.index !== 9) {
       return (
-        <div className="questions">
+        <Questions>
           <Header index={this.state.index} score={this.state.score} />
+          <h2>
+            {question.text}
+          </h2>
           <h3>
-            <center>{question.text}</center>
-          </h3>
-          <h3>
-            <center>{question.category}</center>
-          </h3>
-          <h3>
-            <center>{question.difficulty}</center>
+            {question.category}
           </h3>
           <ul className="list-questions">
             {question.choices.map((choice, index) => (
@@ -101,12 +109,14 @@ class questionBox extends Component {
               {question.correct} {this.state.correct}{" "}
             </h3>
           )}
-        </div>
+        </Questions>
       );
     } else {
       return <QuizCompleted score={this.state.score} />;
     }
   }
 }
+
+
 
 export default questionBox;
