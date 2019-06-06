@@ -1,3 +1,7 @@
+body{
+  background-color: #ededed;
+}
+
 .App {
   text-align: center;
 }
@@ -41,8 +45,11 @@
 
 .choice{
   display: inline-block;
-  
+  background-color: white;
+  margin: 1rem 0;
   width: auto;
+  padding: 1rem;
+  box-shadow: 2px 2px 8px #a7a7a7;
 }
 
 .list.nohighlight {
