@@ -6,18 +6,18 @@ import QuizCompleted from "./quizCompleted";
 
 
 const Questions = styled.div`
-width: 50rem;
-margin: auto;
+  width: 50rem;
+  margin: auto;
 `
 const Choice = styled.li `
   display: inline-block;
   background-color: white;
-  margin: 1rem 0;
+  margin: .3rem 0;
   width: auto;
   padding: 1rem;
   box-shadow: 2px 2px 8px #a7a7a7;
   pointer: cursor;
-  border-radius: .3rem;
+  border-radius: .2rem;
   &:hover {
     background-color: #ddd;
   }`
