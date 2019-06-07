@@ -24,7 +24,7 @@ class App extends Component {
     if (this.state.isLoading === false) {
       return (
         <div>
-          <QuestionBox  questions={this.state.questions} />
+          <QuestionBox questions={this.state.questions} />
         </div>
       );
     } else {

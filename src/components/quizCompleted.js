@@ -1,11 +1,11 @@
 import React from "react";
-import styled from 'styled-components';
+import styled from "styled-components";
 
-const Completed = styled.div` 
-width: 50rem;
-margin: auto;
-min-height: 95vh;
-`
+const Completed = styled.div`
+  width: 50rem;
+  margin: auto;
+  min-height: 95vh;
+`;
 
 const quizCompleted = props => {
   function refreshPage() {

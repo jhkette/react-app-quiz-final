@@ -31,7 +31,7 @@ body{
 
 h2{
   border-bottom: 1px solid #1a1a1a;
-  display: inline-block;
+  display: block;
   font-family: 'Playfair Display', serif;
   font-size: 2rem;
   text-align: center;
@@ -53,14 +53,12 @@ p{
   border: 4px  inset  #1a1a1a;
 }
 
-
 .list-questions{
   display: flex;
   flex-direction: column;
   width: 15rem;
   font-size: 1.1rem;
 }
-
 
 
 button{
