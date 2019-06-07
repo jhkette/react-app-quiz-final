@@ -2,12 +2,19 @@ import React, { Component } from "react";
 import styled from 'styled-components';
 
 import Header from "./header";
+import Footer from "./footer";
 import QuizCompleted from "./quizCompleted";
+
+const Wrapper = styled.div`
+width: 100%;
+ min-height: 100vh;
+`
 
 
 const Questions = styled.div`
   width: 50rem;
   margin: auto;
+  min-height: 90vh;
 `
 const Choice = styled.li `
   display: inline-block;
@@ -101,7 +108,7 @@ class questionBox extends Component {
     if (this.state.completed === false) {
       const question = this.questions[this.state.index];
       return (
-        <div>
+        <Wrapper>
         <Header index={this.state.index} score={this.state.score} />
         <Questions>
           
@@ -138,10 +145,18 @@ class questionBox extends Component {
             </div>
           )}
         </Questions>
-        </div>
+        <Footer />
+        </Wrapper>
       );
     } else {
-      return <QuizCompleted score={this.state.score} />;
+      return (
+        <Wrapper>
+       <Header index={this.state.index} score={this.state.score} /> 
+       <QuizCompleted score={this.state.score} />
+       <Footer />
+       </Wrapper>
+      
+      );
     }
   }
 }
