@@ -14,7 +14,6 @@ p{
   margin-right: 1rem;
   font-size: 1rem;
   color: white;
-  
 }
 `
 const header = props => {
