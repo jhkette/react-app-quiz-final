@@ -49,7 +49,7 @@ p{
   font-size: 1.1rem;
 }
 
-.selected {
+.choice.selected {
   background-color: #c29c1f;
 }
 
