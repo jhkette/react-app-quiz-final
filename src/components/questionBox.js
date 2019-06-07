@@ -21,9 +21,9 @@ const Choice = styled.li `
   background-color: white;
   margin: .3rem 0;
   width: auto;
+  cursor: pointer;
   padding: 1rem;
   box-shadow: 2px 2px 8px #a7a7a7;
-  pointer: cursor;
   border-radius: .05rem;
   &:hover {
     background-color: #ddd;
