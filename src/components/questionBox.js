@@ -109,7 +109,7 @@ class questionBox extends Component {
             {question.text}
           </h2>
           <h3>
-            {question.category}
+            Category: {question.category}
           </h3>
           <ul className="list-questions">
             {question.choices.map((choice, index) => (
