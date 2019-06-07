@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 const Quizinfo = styled.div`
 background-color: #242424

@@ -1,4 +1,10 @@
 import React from "react";
+import styled from 'styled-components';
+
+const Completed = styled.div` 
+width: 50rem;
+margin: auto;
+`
 
 const quizCompleted = props => {
   function refreshPage() {
@@ -6,14 +12,14 @@ const quizCompleted = props => {
   }
 
   return (
-    <div>
+    <Completed>
       <h1>Quiz completed</h1>
-      <h1>{props.score}</h1>
+      <h1>Your score was {props.score}/10</h1>
       <button type="button" onClick={refreshPage}>
         {" "}
-        <span>Reload</span>{" "}
+        <span>Try again</span>
       </button>
-    </div>
+    </Completed>
   );
 };
 
