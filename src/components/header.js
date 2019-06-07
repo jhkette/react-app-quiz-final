@@ -2,22 +2,29 @@ import React from "react";
 import styled, { css } from 'styled-components';
 
 const Quizinfo = styled.div`
-display: flex;
 background-color: #242424
+width: 100%;
+ `
+
+const CenterBar  = styled.div`
+width: 50rem;
+margin: auto;
+display: flex;
 p{
-  
   margin-right: 1rem;
   font-size: 1.4rem;
   color: white;
   
-} `
-
+}
+`
 const header = props => {
   return (
     <Quizinfo>
+    <CenterBar>
       <p>Fancy quiz app</p>
       <p>Counter: {props.index + 1}/10</p>
       <p>Score: {props.score}/10</p>
+      </CenterBar>
     </Quizinfo>
   );
  };
