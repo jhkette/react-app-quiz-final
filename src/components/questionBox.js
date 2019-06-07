@@ -118,10 +118,13 @@ class questionBox extends Component {
           <button onClick={this.nextQuestion}>next</button>
           <button onClick={this.checkselected}> Select </button>
           {this.state.submitted && (
-            <h3>
-              {" "}
-              {question.correct} {this.state.correct}{" "}
-            </h3>
+            <div>
+            <p>
+             That's {this.state.correct} !
+             
+            </p>
+            <p>  The answer is {question.correct}. </p>
+            </div>
           )}
         </Questions>
         </div>

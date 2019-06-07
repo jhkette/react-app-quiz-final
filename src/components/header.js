@@ -12,7 +12,7 @@ margin: auto;
 display: flex;
 p{
   margin-right: 1rem;
-  font-size: 1.4rem;
+  font-size: 1rem;
   color: white;
   
 }
@@ -21,7 +21,7 @@ const header = props => {
   return (
     <Quizinfo>
     <CenterBar>
-      <p>Fancy quiz app</p>
+      <p>Quiz app</p>
       <p>Counter: {props.index + 1}/10</p>
       <p>Score: {props.score}/10</p>
       </CenterBar>

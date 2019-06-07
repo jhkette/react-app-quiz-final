@@ -40,10 +40,10 @@ h2{
 h3{
  
   display: inline-block;
-  font-family: 'Playfair Display', serif;
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin: .5rem 0;
+  font-weight: 400;
 }
 
 
@@ -66,13 +66,13 @@ button{
   padding: .65rem 2.5rem;
   background-color: white;
   border: 1px solid #1a1a1a;
-  border-radius: .3rem;
+  border-radius: .05rem;
   transition: .2s;
 
 }
 
 button:hover{
-  background-color: gray;
+  background-color: #ddd;
 }
 
 
