@@ -58,15 +58,27 @@ h3{
 
 }
 
-.App-link {
-  color: #61dafb;
+
+
+button{
+  margin-top: 2rem;
+  margin-right: 1rem;
+  padding: .65rem 2.5rem;
+  background-color: white;
+  border: 1px solid #1a1a1a;
+  border-radius: .3rem;
+  transition: .2s;
+
+}
+
+button:hover{
+  background-color: gray;
 }
 
 
 
-.list.nohighlight {
-  background-color: #ededed;
-}
+
+
 
 @keyframes App-logo-spin {
   from {

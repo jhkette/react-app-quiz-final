@@ -65,7 +65,7 @@ class questionBox extends Component {
   };
 
   checkselected = choice => {
-    if (!this.state.submitted) {
+    if ((!this.state.submitted) && (this.state.selected)) {
       this.setState({ submitted: true });
       if (this.state.selected === this.questions[this.state.index].correct) {
         console.log("correct");
