@@ -36,7 +36,8 @@ class questionBox extends Component {
       results: false,
       index: 0,
       submitted: false,
-      correct: null
+      correct: null,
+      completed: false
     };
     this.questions = props.questions;
   }
@@ -54,27 +55,36 @@ class questionBox extends Component {
   }
 
   nextQuestion = () => {
-    if (this.state.index < 9 && this.state.submitted === true) {
-      this.setState({
-        index: this.state.index + 1,
-        submitted: false,
-        selected: null,
-        selectedid: null
-      });
+    
+      const index = this.state.index + 1;
+      if (this.state.submitted === true) {
+      if (index < 10) { 
+        this.setState({
+          index: index,
+          submitted: false,
+          selected: null,
+          selectedid: null  
+        });
     }
+    else{
+      this.setState({
+        completed: true
+      })
+    }
+  }
   };
 
   checkselected = choice => {
     if ((!this.state.submitted) && (this.state.selected)) {
       this.setState({ submitted: true });
       if (this.state.selected === this.questions[this.state.index].correct) {
-        console.log("correct");
+  
         const scoreToAdd = this.state.score;
         this.setState({ score: scoreToAdd + 1, correct: "correct" });
-        console.log(this.state.score);
+       
       } else {
         this.setState({ correct: "incorrect" });
-        console.log("incorrect");
+     
       }
     }
   };
@@ -86,9 +96,10 @@ class questionBox extends Component {
 
 
   render() {
-    const question = this.questions[this.state.index];
+    
 
-    if (this.state.index !== 9) {
+    if (this.state.completed === false) {
+      const question = this.questions[this.state.index];
       return (
         <div>
         <Header index={this.state.index} score={this.state.score} />
