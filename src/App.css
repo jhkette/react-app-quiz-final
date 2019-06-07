@@ -50,7 +50,7 @@ p{
 }
 
 .selected {
-  border: 4px  inset  #1a1a1a;
+  background-color: #c29c1f;
 }
 
 .list-questions{
