@@ -33,7 +33,7 @@ const Choice = styled.li`
   box-shadow: 2px 2px 8px #a7a7a7;
   border-radius: 0.05rem;
   &:hover {
-    background-color: #c29c1f;
+    background-color: #00A9DE;
   }
 `;
 
@@ -109,7 +109,7 @@ class questionBox extends Component {
           <Header index={this.state.index} score={this.state.score} />
           <Questions>
             <h2>{question.text}</h2>
-            <h3>Category: {question.category}</h3>
+            <h3><em>Category: {question.category}</em></h3>
             <ul className="list-questions">
               {question.choices.map((choice, index) => (
                 <Choice
