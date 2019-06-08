@@ -50,7 +50,7 @@ p{
 }
 
 .choice.selected {
-  background-color: #00A9DE
+  background-color: #00A9DE;
 }
 
 .list-questions{
@@ -71,11 +71,12 @@ button{
   transition: .2s;
   font-size: 1.1rem;
   cursor: pointer;
+  width: 8rem;
 
 }
 
 button:hover{
-  background-color: #ddd;
+  background-color: #00A9DE;
 }
 
 
@@ -83,11 +84,3 @@ button:hover{
 
 
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

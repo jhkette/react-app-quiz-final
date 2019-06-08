@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Quizinfo = styled.div`
-background-color: #242424
+background-color: #00A9DE;
 width: 100%;
  `;
 
@@ -14,6 +14,7 @@ const CenterBar = styled.div`
     margin-right: 1rem;
     font-size: 1rem;
     color: white;
+    font-weight: 900;
   }
 `;
 const header = props => {
