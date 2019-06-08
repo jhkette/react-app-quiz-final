@@ -29,9 +29,12 @@ const Choice = styled.li`
   margin: 0.3rem 0;
   width: auto;
   cursor: pointer;
+  font-size: 1.1rem;
   padding: 1rem;
   box-shadow: 2px 2px 8px #a7a7a7;
-  border-radius: 0.05rem;
+  border-radius: .05rem;
+  border: 1px solid #00A9DE
+  text-align: center;
   &:hover {
     background-color: #00A9DE;
   }
