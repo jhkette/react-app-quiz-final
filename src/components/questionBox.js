@@ -101,7 +101,6 @@ class questionBox extends Component {
 
   addselected = ({ choice, index }) => {
     this.setState({ selected: choice, selectedid: index });
-    console.log(this.state.selected);
   };
 
   render() {
